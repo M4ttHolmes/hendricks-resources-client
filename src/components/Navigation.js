@@ -40,14 +40,12 @@ export default class Navigation extends React.Component {
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ms-auto" navbar>
-                {/* //! Conditional Statement for Session State Token - Hide */}
                 <NavItem>
-                    <NavLink><Button>Create</Button></NavLink>
+                    <NavLink><Button onClick={this.props.createOn}>Create Resource</Button></NavLink>
                 </NavItem>
-                {/* //! Conditional Statement for Session State Token - Toggle Login/Logout */}
-                <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap"><Button>Login</Button></NavLink>
-                </NavItem>
+                {/* <NavItem>
+                    <NavLink href=""><Button>Login</Button></NavLink>
+                </NavItem> */}
                 </Nav>
             </Collapse>
             </Navbar>
