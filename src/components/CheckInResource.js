@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Form, FormGroup, ModalHeader, Button, Label, Input, Modal, ModalBody } from 'reactstrap';
-// import APIURL from '../helpers/environment';
+import APIURL from '../helpers/environment';
 
 
 const CheckInResource = (props) => {
@@ -11,8 +11,7 @@ const CheckInResource = (props) => {
     const resourceUpdate = (e, resource) => {
         e.preventDefault();
         console.log(props);
-        // fetch(`${APIURL}/resource/update/${props.updatedResource.id}`, {
-        fetch(`http://localhost:5000/resource/update/${props.updatedResource.id}`, {
+        fetch(`${APIURL}/resource/update/${props.updatedResource.id}`, {
 
             method: "PUT",
             body: JSON.stringify({resource: {

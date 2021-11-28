@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Form, FormGroup, ModalHeader, Button, Label, Input, Modal, ModalBody } from 'reactstrap';
-// import APIURL from '../helpers/environment';
+import APIURL from '../helpers/environment';
 
 const CreateResource = (props) => {
     const [name, setName] = useState("");
@@ -8,8 +8,7 @@ const CreateResource = (props) => {
 
     const createResource = (e) => {
         e.preventDefault();
-        // fetch(`${APIURL}/character/create`, {
-        fetch(`http://localhost:5000/resource/create`, {
+        fetch(`${APIURL}/resource/create`, {
             method: "POST",
             body: JSON.stringify({
                 resource: {

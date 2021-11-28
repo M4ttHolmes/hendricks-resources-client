@@ -3,6 +3,7 @@ import {Table, Button} from "reactstrap"
 import CheckInResource from "./CheckInResource";
 import CheckOutResource from "./CheckOutResource";
 import CreateResource from "./CreateResource";
+import APIURL from "../helpers/environment";
 
 const Main = (props) => {
     const [resources, setResources] = useState([]);
@@ -30,8 +31,7 @@ const Main = (props) => {
     const getAllResources = () => {
         console.log("GetAllResources Function Called");
         
-        // fetch(`${APIURL}/resource`, {
-        fetch(`http://localhost:5000/resource`, {
+        fetch(`${APIURL}/resource`, {
             method: "GET",
             headers: new Headers({
                 "Content-Type": "application/json"
