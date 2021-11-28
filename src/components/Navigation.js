@@ -36,7 +36,7 @@ export default class Navigation extends React.Component {
         return (
         <div>
             <Navbar color="dark" dark expand="md">
-            <NavbarBrand href="/"><img style={styles.logo} src={Logo} alt="HRH Logo"/>Pediatric Resource Repository</NavbarBrand>
+            <NavbarBrand id="brand" href="/"><img style={styles.logo} src={Logo} alt="HRH Logo"/>Pediatric Resource Repository</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ms-auto" navbar>
